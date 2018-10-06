@@ -1,0 +1,36 @@
+        #header {/*홈페이지 이름*/
+            background-color: aquamarine;
+            text-align: center;
+            width: 20%;
+            height: 10%;
+            float: left;
+        }
+        #main {/*메인사진 넣을 곳*/
+            display: table-cell;
+            background-color: darkgoldenrod;
+            width: 80%;
+            height: 10%;
+            float: right;
+        }
+        #category{/*카테고리*/
+            display: table-cell;
+            text-align: center;
+            background-color: beige;
+            width: 20%;
+            height: 90%;
+            float: left;
+        }
+        #set {/*세트 사진 메인화면*/
+            display: table-cell;
+            background-color: darksalmon;
+            width: 80%;
+            height: 90%;
+            float: right;
+        }
+        a.HrefLine:hover   { text-decoration:underline; color:#FF0000 }/*하이퍼링크 위에 마우스를 두면 텍스트를 빨간색으로 변경*/
+
+        img {
+            float: left;
+            width: 300px;
+            height: 450px;
+        }
