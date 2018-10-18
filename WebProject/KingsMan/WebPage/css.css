@@ -42,11 +42,20 @@
             height: 20%;
             float: right;
         }
+        #game{/*게임*/
+            display: table-cell;
+            text-align: center;
+            background-color: gray;
+            width: 20%;
+            height: 10%;
+            float: left;
+            }
         a:link {color: black;}
         a:visited {color: black;}
         a:hover {color: red;}
         a:active {color: red;}
         a{ text-decoration: none }
+
         /*img {
             float: left;
             width: 300px;
