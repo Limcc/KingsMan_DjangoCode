@@ -1,24 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>KingsMan</title>
-    <link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="stylesheet" type="text/css" href="{% static "css.css" %}">
 </head>
 <body>
     <div id="header">
-        <a href="KingsMan.html" style="color: black"><h1>KingsMan</h1></a>
+        <a href="/" style="color: black"><h1>KingsMan</h1></a>
     </div>
     <div id="main">
         사진을 음 넣겠지??<br><br><br><br><br><br>
     </div>
     <div id="category">
         <br><br>
-        <a href="outer.html">OUTER</a><br><br>
-        <a href="shirts.html">SHIRTS</a><br><br>
-        <a href="pants.html">PANTS</a><br><br>
-        <a href="shoes.html">SHOES</a><br><br>
-        <a href="accessory.html">ACCESSORY</a><br><br>
+        <a href="{% url 'outer' %}">OUTER</a><br><br>
+        <a href="{% url 'shirts' %}">SHIRTS</a><br><br>
+        <a href="{% url 'pants' %}">PANTS</a><br><br>
+        <a href="{% url 'shoes' %}">SHOES</a><br><br>
+        <a href="{% url 'accessory' %}">ACCESSORY</a><br><br>
     </div>
     <div id="photo">
         세트사진<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
