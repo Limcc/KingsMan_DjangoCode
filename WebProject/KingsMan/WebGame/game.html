@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8" />
 <title>Wearing clothes</title>
-<embed src="KingsmanOST.mp3" hidden=true loop>
+<embed src="static/KingsmanOST.mp3" hidden=true loop>
 <style>
 body {
    margin: 0px;
 }
 
 canvas {
-   background-image: url(startpage.jpg);
-	background-size:width="1200px" height="900px";
+   background-image: url(static/startpage.jpg);
+    background-size:width="1200px" height="900px";
 }
 
 .input {
@@ -251,27 +251,27 @@ canvas {
 	if(get==2)
 	{
 		man = new Image();
-		man.src = "man1.png";
+		man.src = "/static/man1.png";
 	}
 	if(get==4)
 	{
 		man = new Image();
-		man.src = "man2.png";
+		man.src = "/static/man2.png";
 	}
 	if(get==6)
 	{
 		man = new Image();
-		man.src = "man3.png";
+		man.src = "/static/man3.png";
 	}
 	if(get==8)
 	{
 		man = new Image();
-		man.src = "man4.png";
+		man.src = "/static/man4.png";
 	}
 	if(get==10)
 	{
 		man = new Image();
-		man.src = "man5.png";
+		man.src = "/static/man5.png";
 		function countdown(time)
 		{
 			if (time>0)
@@ -517,13 +517,13 @@ else if (STATE_GAMEEND)
         function setImage()
         {
 	img = new Image();
-	img.src = "mark.png";
+	img.src = "/static/mark.png";
 
             man = new Image();
-            man.src = "man.png";   
+            man.src = "/static/man.png";
 
             background = new Image();
-            background.src = "background.jpg"; 
+            background.src = "/static/background.jpg";
         }
 
         function startMessage()

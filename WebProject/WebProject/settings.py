@@ -55,7 +55,7 @@ ROOT_URLCONF = 'WebProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'KingsMan/WebPage')]
+        'DIRS': [os.path.join(BASE_DIR, 'KingsMan/WebPage'), os.path.join(BASE_DIR, 'KingsMan/WebGame')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
 TIME_ZONE = 'UTC'
 
@@ -121,3 +121,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "KingsMan/static")
+MEDIA_URL = '/img/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "KingsMan/productimg")
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "KingsMan/WebGame/static"),
+)

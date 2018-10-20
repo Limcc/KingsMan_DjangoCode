@@ -3,39 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>KingsMan/{{ category }}</title>
-    <link rel="stylesheet" type="text/css" href="../static/css.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/css.css">
 </head>
 <body>
     <div id="header">
         <a href="/" style= "color: black"><h1>{{ category }}</h1></a>
     </div>
-    <div id="photo">
-        accessory<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="photo2">
+
     </div>
     <div id="category">
-        <br><br>
-        <a href="{% url 'outer' %}">OUTER</a><br><br>
-        <a href="{% url 'shirts' %}">SHIRTS</a><br><br>
-        <a href="{% url 'pants' %}">PANTS</a><br><br>
-        <a href="{% url 'shoes' %}">SHOES</a><br><br>
-        <a href="{% url 'accessory' %}">ACCESSORY</a><br><br>
-    </div>
-    <div id="theothers">
-        <br><br>
-        <a href="search.html">검색</a><br><br>
-        <a href="cart.html">장바구니</a><br><br>
-        <a href="question.html">Q&A</a><br><br>
-        <a href="login.html">로그인</a><br><br>
-        <a href="join.html">회원가입</a><br><br>
+        <ul class="a">
+        <li><a href="{% url 'outer' %}">OUTER</a><br><br></li>
+        <li><a href="{% url 'shirts' %}">SHIRTS</a><br><br></li>
+        <li><a href="{% url 'pants' %}">PANTS</a><br><br></li>
+        <li><a href="{% url 'shoes' %}">SHOES</a><br><br></li>
+        <li><a href="{% url 'accessory' %}">ACCESSORY</a><br><br></li>
+        <li><a href="{% url 'game' %}">GAME</a><br><br></li>
+        <li><a href="{% url 'search' %}">검색</a><br><br></li>
+        <li><a href="{% url 'cart' %}">장바구니</a><br><br></li>
+        <li><a href="{% url 'question' %}">Q&A</a><br><br></li>
+        <li><a href="{% url 'login' %}">로그인</a><br><br></li>
+        <li><a href="{% url 'join' %}">회원가입</a></li>
     </div>
     <div id="information">
-        제일 하단에 표시될 화면임<br>
-        회사 정보<br>
-        주소 <br>
-        전화번호<br>
-        입금계좌 등...<br>
-        d<br>
-        d<br>
+        <p>주소 : 경상대학교 30동<br><br>입금계좌<br>농협 000-0000-0000-00<br><br>전화번호<br>010-1234-5678</p>
     </div>
 </body>
 </html>

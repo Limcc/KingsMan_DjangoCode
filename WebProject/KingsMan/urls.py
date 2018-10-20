@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import *
 
+from django.conf.urls import static
+from django.conf import settings
 
 urlpatterns = [
     path("", index),
@@ -24,5 +26,11 @@ urlpatterns = [
     path("shirts", shirts, name="shirts"),
     path("pants", pants, name="pants"),
     path("shoes", shoes, name="shoes"),
-    path("accessory", accessory, name="accessory")
+    path("accessory", accessory, name="accessory"),
+    path("search", search, name="search"),
+    path("cart", cart, name="cart"),
+    path("question", question, name="question"),
+    path("login", login, name="login"),
+    path("join", join, name="join"),
+    path("game", game, name="game")
 ]

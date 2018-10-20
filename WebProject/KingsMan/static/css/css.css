@@ -1,0 +1,66 @@
+	body{
+		margin: 0px;
+	}
+    #header {/*홈페이지 이름*/
+        background-color: aquamarine;
+        text-align: center;
+        width: 200px;
+        height: 100px;
+        float: left;
+	    position: fixed;
+        }
+    #main {/*메인사진 넣을 곳*/
+	    width: -webkit-calc(100% - 200px);
+	    height: 500px;
+	    left: 200px;
+	    background-color: lightgreen;
+	    float: right;
+	    position: fixed;
+    }
+    #category{/*카테고리*/
+        text-align: center;
+        background-color: beige;
+	    top: 100px;
+        width: 200px;
+        height: 500px;
+	    position: fixed;
+    }
+    #photo {/*사진 메인화면*/
+        display: table-cell;
+        background-color: darksalmon;
+	    width: -webkit-calc(100% - 200px);
+        height: 2000px;
+	    top: 500px;
+	    left: 200px;
+        float: right;
+	    position: absolute;
+    }
+    #photo2 {/*카테고리 메인화면*/
+        display: table-cell;
+        background-color: darksalmon;
+	    width: -webkit-calc(100% - 200px);
+        height: 2000px;
+	    left: 200px;
+        float: right;
+	    position: fixed;
+    }
+    #information{/*회사 정보*/
+        display: table-cell;
+        background-color: yellow;
+        width: 200px;
+        height: 100%;
+        float: left;
+	    top: 600px;
+	    position: fixed;
+    }
+    a:link {color: black;}
+    a:visited {color: black;}
+    a:hover {color: red;}
+    a:active {color: red;}
+    a{ text-decoration: none }
+    ul.a {
+        list-syle-type: none;
+	    text-align: center;
+	    padding: 0;
+	    letter-spacing: 5px;
+	}
