@@ -3,6 +3,6 @@ from .models import product
 
 # Register your models here.
 class product_admin(admin.ModelAdmin):
-    fields = ["photo", "name", "price", "size", "category"]
+    fields = ["photo", "name", "price", "category"]
 
 admin.site.register(product, product_admin)

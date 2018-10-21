@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>KingsMan</title>
-    <link rel="stylesheet" type="text/css" href="{% static "css/css.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/category.css" %}">
 </head>
 <body>
     <div id="header">
         <a href="/" style="color: black"><h1>KingsMan</h1></a>
     </div>
     <div id="main">
-        <img src="/static/img/background1.jpg" width="100%" height="900px">
+        <img src="/static/img/background1.jpg" width="100%" height="600px">
     </div>
     <div id="category">
         <ul class="a">
@@ -20,21 +20,35 @@
         <li><a href="{% url 'pants' %}">PANTS</a><br><br></li>
         <li><a href="{% url 'shoes' %}">SHOES</a><br><br></li>
         <li><a href="{% url 'accessory' %}">ACCESSORY</a><br><br></li>
-        <li><a href="{% url 'game' %}">GAME</a><br><br></li>
         <li><a href="{% url 'search' %}">검색</a><br><br></li>
         <li><a href="{% url 'cart' %}">장바구니</a><br><br></li>
         <li><a href="{% url 'question' %}">Q&A</a><br><br></li>
         <li><a href="{% url 'login' %}">로그인</a><br><br></li>
-        <li><a href="{% url 'join' %}">회원가입</a></li>
+        <li><a href="{% url 'join' %}">회원가입</a><br><br></li>
+        <li><a href="{% url 'game' %}">GAME</a></li>
         </ul>
     </div>
-    <div id="photo">
-        <img src="/img/{{ path }}" width="200px" height="300px">
-        <p>{{ name }}</p>
-        <p>{{ price }}</p>
-    </div>
+    <ul>
+        <div id="photo" style="padding:20px ">
+            <table><tr>
+            {% for is_tr, product in productList %}
+                <td style="padding:20px ">
+                <a href="http://naver.com/">
+                    <img src="/img/{{ product.photo }}" width="300px" height="450px" >
+                    <p style="text-align: center">{{ product.name }}<br>
+                    {{ product.price }}원</p>
+                </a></td>
+                {% if is_tr %}
+                    </tr><tr>
+                {% endif %}
+            {% endfor %}
+            </tr></table>
+        </div>
+
+
+    </ul>
     <div id="information">
-        <p>주소 : 경상대학교 30동<br><br>입금계좌<br>농협 000-0000-0000-00<br><br>전화번호<br>010-1234-5678</p>
+        <p>주소 : 경상대학교 30동<br><br>입금계좌<br>농협 895-01-205621<br>임혜경<br><br>전화번호<br>010-6255-3781</p>
     </div>
 </body>
 </html>

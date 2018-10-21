@@ -5,8 +5,9 @@ from .models import product
 # Create your views here.
 
 def index(request):
-    db = product.objects.get(category="set")
-    dic = {"path": db.photo, "name": db.name, "price": db.price}
+    db = product.objects.filter(category="set")
+    is_tr = [i % 3 == 2 for i in range(len(db))]
+    dic = {"productList": zip(is_tr, db)}
     return render(request, "KingsMan.html", dic)
 
 def outer(request):

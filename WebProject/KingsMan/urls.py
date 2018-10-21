@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import *
 
-from django.conf.urls import static
+from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
@@ -33,4 +33,4 @@ urlpatterns = [
     path("login", login, name="login"),
     path("join", join, name="join"),
     path("game", game, name="game")
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

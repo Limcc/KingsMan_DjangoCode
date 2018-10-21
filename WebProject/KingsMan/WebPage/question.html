@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Q&A</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/css.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/category.css">
     <style>
         #question {/*질의응답*/
-            display: table-cell;
-            background-color: darksalmon;
-            width: 80%;
-            height: 90%;
-            float: right;
+	        display: table-cell;
+	        background-color: darksalmon;
+	        width: -webkit-calc(100% - 200px);
+	        height: 2000px;
+	        left: 200px;
+	        float: right;
+	        position: fixed;
         }
     </style>
 </head>
 <body>
     <div id="header">
-        <a href="KingsMan.html" style= "color: black"><h1>KingsMan</h1></a>
+        <a href="/" style= "color: black"><h1>KingsMan</h1></a>
     </div>
     <div id="question">
         <br><br><br><br>
@@ -35,15 +37,16 @@
         <li><a href="{% url 'pants' %}">PANTS</a><br><br></li>
         <li><a href="{% url 'shoes' %}">SHOES</a><br><br></li>
         <li><a href="{% url 'accessory' %}">ACCESSORY</a><br><br></li>
-        <li><a href="{% url 'game' %}">GAME</a><br><br></li>
         <li><a href="{% url 'search' %}">검색</a><br><br></li>
         <li><a href="{% url 'cart' %}">장바구니</a><br><br></li>
         <li><a href="{% url 'question' %}">Q&A</a><br><br></li>
         <li><a href="{% url 'login' %}">로그인</a><br><br></li>
-        <li><a href="{% url 'join' %}">회원가입</a></li>
+        <li><a href="{% url 'join' %}">회원가입</a><br><br></li>
+        <li><a href="{% url 'game' %}">GAME</a></li>
+        </ul>
     </div>
     <div id="information">
-        <p>주소 : 경상대학교 30동<br><br>입금계좌<br>농협 000-0000-0000-00<br><br>전화번호<br>010-1234-5678</p>
+        <p>주소 : 경상대학교 30동<br><br>입금계좌<br>농협 895-01-205621<br>임혜경<br><br>전화번호<br>010-6255-3781</p>
     </div>
 </body>
 </html>
