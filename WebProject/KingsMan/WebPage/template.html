@@ -7,12 +7,10 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/category.css" %}">
 </head>
 <body>
-    <div id="header">
-        <a href="/" style= "color: black"><h1>{{ category }}</h1></a>
+        <div id="header">
+        <a href="/" style="color: black"><h1>KingsMan</h1></a>
     </div>
-    <div id="photo2">
 
-    </div>
     <div id="category">
         <ul class="a">
         <li><a href="{% url 'outer' %}">OUTER</a><br><br></li>
@@ -28,6 +26,23 @@
         <li><a href="{% url 'game' %}">GAME</a></li>
         </ul>
     </div>
+        <ul>
+        <div id="photo2" style="padding:20px ">
+            <table><tr>
+            {% for is_tr, product in mainList %}
+                <td style="padding:20px ">
+                <a href="http://naver.com/">
+                    <img src="/img/{{ product.photo }}" width="250px" height="350px" >
+                    <p style="text-align: center">{{ product.name }}<br>
+                    {{ product.price }}원</p>
+                </a></td>
+                {% if is_tr %}
+                    </tr><tr>
+                {% endif %}
+            {% endfor %}
+            </tr></table>
+        </div>
+    </ul>
     <div id="information">
         <p>주소 : 경상대학교 30동<br><br>입금계좌<br>농협 895-01-205621<br>임혜경<br><br>전화번호<br>010-6255-3781</p>
     </div>

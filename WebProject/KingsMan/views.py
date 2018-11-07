@@ -7,26 +7,39 @@ from .models import product
 def index(request):
     db = product.objects.filter(category="set")
     is_tr = [i % 3 == 2 for i in range(len(db))]
-    dic = {"productList": zip(is_tr, db)}
+    dic = {"mainList": zip(is_tr, db)}
     return render(request, "KingsMan.html", dic)
 
+
 def outer(request):
-    return temp(request, "outer")
+    db = product.objects.filter(category="outer")
+    is_tr = [i % 3 == 2 for i in range(len(db))]
+    dic = {"mainList": zip(is_tr, db)}
+    return render(request, "template.html", dic)
 
 def shirts(request):
-    return temp(request, "shirts")
+    db = product.objects.filter(category="shirts")
+    is_tr = [i % 3 == 2 for i in range(len(db))]
+    dic = {"mainList": zip(is_tr, db)}
+    return render(request, "template.html", dic)
 
 def pants(request):
-    return temp(request, "pants")
+    db = product.objects.filter(category="pants")
+    is_tr = [i % 3 == 2 for i in range(len(db))]
+    dic = {"mainList": zip(is_tr, db)}
+    return render(request, "template.html", dic)
 
 def shoes(request):
-    return temp(request, "shoes")
+    db = product.objects.filter(category="shoes")
+    is_tr = [i % 3 == 2 for i in range(len(db))]
+    dic = {"mainList": zip(is_tr, db)}
+    return render(request, "template.html", dic)
 
 def accessory(request):
-    return temp(request, "accessory")
-
-def temp(request, category):
-    return render(request, "template.html", {"category": category})
+    db = product.objects.filter(category="accessory")
+    is_tr = [i % 3 == 2 for i in range(len(db))]
+    dic = {"mainList": zip(is_tr, db)}
+    return render(request, "template.html", dic)
 
 def search(request):
     return render(request, "search.html")

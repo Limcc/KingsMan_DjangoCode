@@ -43,6 +43,7 @@
 	    width: -webkit-calc(1030px);
         height: 2000px;
 	    left: 200px;
+        top: 0px;
         float: right;
 	    position: fixed;
     }
