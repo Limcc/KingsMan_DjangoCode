@@ -58,3 +58,9 @@ def join(request):
 
 def game(request):
     return render(request, "game.html")
+
+def item(request, itemnumber):
+    return render(request, "item.html")
+
+def banner(request):
+    return render(request, "banner.html")

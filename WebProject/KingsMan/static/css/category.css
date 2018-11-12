@@ -1,68 +1,103 @@
 	body{
-		margin: 0 auto;
+		margin: 0px;
 	}
-    #header {/*홈페이지 이름*/
-        background-color: aquamarine;
-        text-align: center;
-        top: 0px;
-        width: 200px;
-        height: 100px;
-        float: left;
-	    position: fixed;
-        }
+	#logo{
+		top: 25px;
+		left: 25px;
+		width: 150px;
+		height: 150px;
+		position: fixed;
+		z-index: 3;
+	}
+	#login{
+		top: 225px;
+		left: 0px;
+		position: fixed;
+		width: 200px;
+		height: 100px;
+		text-align: center;
+		line-height: 1.9em;
+		font-size: 1.2em;
+	}
     #main {/*메인사진 넣을 곳*/
-        top: 0px;
-	    width: -webkit-calc(1070px);
-	    height: 600px;
-	    left: 200px;
-	    background-color: lightgreen;
-	    float: right;
+	    width: 1600px;
+	    height: 1000px;
 	    position: fixed;
     }
     #category{/*카테고리*/
         text-align: center;
-        background-color: beige;
-	    top: 100px;
+	    top: 325px;
+	    left: 0px;
         width: 200px;
         height: 500px;
 	    position: fixed;
     }
     #photo {/*사진 메인화면*/
-        display: table-cell;
-        background-color: darksalmon;
-	    width: -webkit-calc(1030px);
-        height: 2000px;
-	    top: 500px;
+        background-color: white;
+	    width: 1400px;
+        height: 1700px;
+	    top: 1000px;
 	    left: 200px;
-        float: right;
 	    position: absolute;
     }
     #photo2 {/*카테고리 메인화면*/
-        display: table-cell;
-        background-color: darksalmon;
-	    width: -webkit-calc(1030px);
-        height: 2000px;
+	    width: 1400px;
+	    height: 1700px;
 	    left: 200px;
-        top: 0px;
-        float: right;
-	    position: fixed;
+	    float: right;
+	    position: absolute;
     }
-    #information{/*회사 정보*/
-        display: table-cell;
-        background-color: yellow;
-        width: 200px;
-        height: 100%;
-        float: left;
-	    top: 600px;
-	    position: fixed;
-    }
+    #explain{
+		background-color: white;
+		width: 1400px;
+        height: 3500px;
+		left: 200px;
+		position: absolute;
+	}
+	#footer{
+		width: 1700px;
+		height: 100px;
+		top: 2600px;
+		position: absolute;
+		text-align: center;
+	}
+	#footer2{
+		width: 1700px;
+		height: 100px;
+		top: 1600px;
+		position: absolute;
+		text-align: center;
+	}
+	#footer3{
+		width: 1700px;
+		height: 100px;
+		top: 3400px;
+		position: absolute;
+		text-align: center;
+	}
+	#toTop {
+		position:fixed; bottom:1px;
+		right:1px; cursor:pointer;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px; padding:5px
+	}
+	table{
+		border-spacing: 100px 50px;
+		text-align: center;
+		margin: auto;
+	}
+	table.ex{
+		border: 3px solid #444444;
+		text-align: left;
+	}
+
     a:link {color: black;}
     a:visited {color: black;}
     a:hover {color: red;}
     a:active {color: red;}
     a{ text-decoration: none }
     ul.a {
-        list-syle-type: none;
+	    list-style-type: none;
 	    text-align: center;
 	    padding: 0;
 	    letter-spacing: 5px;

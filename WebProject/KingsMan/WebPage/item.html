@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KingsMan/set1</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/category.css" %}">
+    <style>
+        #right{
+            font-family: serif,sans-serif;
+        }
+        #right ul li{
+            display:inline;
+            padding:14px; letter-spacing: 5px;
+            margin: 15px;
+            font-family: bold;
+        }
+        #right ul{
+            list-style:none;
+            border-top:1px solid grey; border-bottom:1px solid grey; padding:20px;
+            /*font: */
+        }
+        #right select{
+            width: 400px; padding:15px;  background-color: lightgrey;
+        }
+    </style>
+</head>
+<body onload="init();">
+   <script language="JavaScript">
+      var sell_price;
+      var amount;
+
+      function init () {
+         sell_price = document.form.sell_price.value;
+         amount = document.form.amount.value;
+         document.form.sum.value = sell_price;
+         change();
+      }
+      function add () {
+         hm = document.form.amount;
+         sum = document.form.sum;
+         hm.value ++ ;
+         sum.value = parseInt(hm.value) * sell_price;
+      }
+
+      function del () {
+         hm = document.form.amount;
+         sum = document.form.sum;
+
+         if (hm.value > 1) {
+         hm.value -- ;
+         sum.value = parseInt(hm.value) * sell_price;
+      }
+   }
+
+   function change () {
+      hm = document.form.amount;
+      sum = document.form.sum;
+
+      if (hm.value < 0) {
+         hm.value = 0;
+      }
+      sum.value = parseInt(hm.value) * sell_price;
+   }  //수량 1씩 늘어날떄마다 가격바뀌는 스크립트
+    </script>
+
+
+    <div id="logo">
+        <a href="/"><img src="/static/img/home.jpg" width="100%" height="100%"></a>
+    </div>
+
+    <div id="login">
+        <span style="font-family: 궁서; ">
+        <a href="login.html">로 그 인</a><br>
+        <a href="join.html">회 원 가 입</a><br>
+        </span>
+    </div>
+    <div id="category">
+        <br>
+        <ul class="a">
+        <li><a href="{% url 'outer' %}">OUTER</a><br><br></li>
+        <li><a href="{% url 'shirts' %}">SHIRTS</a><br><br></li>
+        <li><a href="{% url 'pants' %}">PANTS</a><br><br></li>
+        <li><a href="{% url 'shoes' %}">SHOES</a><br><br></li>
+        <li><a href="{% url 'accessory' %}">ACCESSORY</a><br><br><br><br></li>
+        <li><a href="{% url 'search' %}">SEARCH</a><br><br></li>
+        <li><a href="{% url 'cart' %}">CART</a><br><br></li>
+        </ul>
+    </div>
+    <div id="explain">
+        <table border-right="none">
+        <tr>
+            <td rowspan="4"><img src="베니스 (와인).jpg" width="300px" height="450px"></td>
+            <td><div id="right" align="center">
+                <p style="font-size: 20px">패트릭 팬츠(Navy)<br><br>21,500<br></p>
+                <select>
+                    <option value="*" link_image="" >- [필수] 사이즈를 선택해 주세요 - </option>
+                    <option value="**" link_image="">-------------------</option>
+                    <option value="S (28)" link_image="">S (28)</option>
+                    <option value="M (30)" link_image="">M (30)</option>
+                    <option value="L (32)" link_image="">L (32)</option>
+                    <option value="XL (34)" link_image="">XL (34)</option>
+                </select>
+                <br><br>
+                <form name="form" method="get" >
+                    수량 : <input type=hidden name="sell_price" value="21500"><!--value 값이 옷 한벌가격 상품마다 가격 바꿀것 -->
+                    <input type="text" name="amount" value="1" size="3" onchange="change();">
+                    <input type="button" value=" + " onclick="add();"><input type="button" value=" - " onclick="del();"><br>
+                    금액 : <input type="text" name="sum" size="11" readonly>원
+                </form>
+                <br><br>
+                <ul>
+                    <li style="border:1px solid black; background-color: black;"><a style="color: white" href="#">구매하기</a></li>
+                    <li style="border:1px solid grey; background-color: white"><a href="#">장바구니</a></li>
+                </ul>
+            </div></td>
+        </tr>
+        </table>
+        <hr/><hr/>
+        <table border-right="none">
+        <tr>
+            <td><img src="베니스 (와인).jpg" width="400px" height="600px"></td>
+        </tr>
+        <tr>
+            <td><img src="베니스 (와인).jpg" width="400px" height="600px"></td>
+        </tr>
+        <tr>
+            <td><img src="베니스 (와인).jpg" width="400px" height="600px"></td>
+        </tr>
+        <tr>
+            <td><em>COMMENT</em><br>
+            텍스쳐가 독특하고 매력적인 수트입니다.<br>
+            자켓은 땀흡수패드와 소매는 리얼버튼으로 제작되었습니다.<br>
+            또한 속주머니가 세개나 있어 수납공간이 여유있습니다.<br>
+            바지는 이중버튼으로 되어있고 안쪽에는 전부 헤리작업으로 마무리했습니다.<br>
+            그리고 주머니 안쪽에는 동전 주머니를 추가하였고, 밑단에는 5cm 여유분이 있어 기장을 늘릴 수 있습니다.<br>
+            와인 색상으로 포멀한 룩과 캐쥬얼한 룩 모두 소화가 가능한 만능 수트입니다.</td>
+        </tr>
+        </table>
+        <table class="ex">
+        <tr>
+            <td>
+            배송기간안내
+                <ul>
+                    <li>주문 시 입금기한은 7일 이내이며, 입금확인은 자동 시스템 처리(진행) 됩니다.</li>
+                    <li>입금자명과 주문자 명이 다를 경우와 주문 금액이 조금이라도 다를 경우엔 입금확인이 되지 않으니 꼭 연락해 주세요.</li>
+                    <li>결제(오후 6시 이전기준) 후 평균 2~5일 이내(일, 공휴일 제외) 상품을 수령하실 수 있습니다.</li>
+                    <li>주문하실 때 품절이 아니더라도 재고 수량에 따라 조기 품절이 될 수 있으며 입고지연 및 품절 상품은 개별적으로 연락을 드리고 있으니 이 점 양해해 주시기 바랍니다.</li>
+                </ul>
+                배송안내
+                <ul>
+                    <li>상품의 구매액이 50,000원 이상인 경우 배송료는 무료입니다.</li>
+                    <li>상품의 구매액이 50,000원 미만인 경우 배송료 2,500원이 결제 금액에 추가됩니다.</li>
+                    <li>반품 또는 교환은 반드시 CJ대한통운택배를 이용해 주세요 (CJ대한통운 고객센터 1588-1255)</li>
+                    <li>배송확인은 오후 8시 이후 확인 가능합니다.</li>
+                    <li>일요일, 공휴일은 배송이 불가능합니다.</li>
+                    <li>퀵(지하철,오토바이,등) 배송 이용 시 모든 부담은 착불로 진행됩니다.</li>
+                </ul>
+            </td>
+        </tr>
+        </table>
+    </div>
+    <a id="toTop" href="#"><img src="/static/img/top.png" width="70" height="70" alt=""></a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="./images/jquery.scroll.pack.js"></script>
+    <script src="./images/jquery.easing.js"></script>
+    <div id="footer3">
+        <p>주소 : 경상대학교 30동&emsp;&emsp;입금계좌 : 농협 000-0000-0000-00&emsp;&emsp;전화번호 : 010-1234-5678&emsp;&emsp;<a href="{% url 'question' %}">Q&A</a>&emsp;&emsp;<a href="{% url 'game' %}">GAME</a></p>
+    </div>
+</body>
+</html>

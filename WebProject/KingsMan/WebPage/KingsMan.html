@@ -5,35 +5,91 @@
     <meta charset="UTF-8">
     <title>KingsMan</title>
     <link rel="stylesheet" type="text/css" href="{% static "css/category.css" %}">
+
+    <style type="text/css">
+        #pop{
+        width:300px; height:400px; background:#3d3d3d; color:white;
+        position:absolute; top:10px; left:450px; text-align:center;
+        border:2px solid lightgrey;
+        }
+
+        .close div{float:left; text-align:right;}
+        #check{font-size:12px; font-family:'돋움'; padding-left:70px;}
+        #close{font-size:13px; padding:5px; font-weight:bold;}
+
+    </style>
+
+    <script language="JavaScript">
+    <!--
+        function setCookie( name, value, expiredays ) {
+            var todayDate = new Date();
+            todayDate.setDate( todayDate.getDate() + expiredays );
+            document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+        }
+
+        function closePop() {
+            if ( document.pop_form.chkbox.checked ){
+                setCookie( "maindiv", "done" , 1 );
+            }
+            document.all['pop'].style.visibility = "hidden";
+        }
+    //-->
+
+        cookiedata = document.cookie;
+        if ( cookiedata.indexOf("maindiv=done") < 0 ){
+        document.all['pop'].style.visibility = "visible";
+        }
+        else {
+            document.all['pop'].style.visibility = "hidden";
+        }
+
+        //-->하루동안 배너 x
+    </script>
+
 </head>
 <body>
-    <div id="header">
-        <a href="/" style="color: black"><h1>KingsMan</h1></a>
-    </div>
+
+    <div id="logo">
+		<a href="/"><img src="/static/img/home.jpg" width="100%" height="100%"></a>
+	</div>
     <div id="main">
-        <img src="/static/img/background1.jpg" width="100%" height="600px">
+        <img src="/static/img/background1.jpg" width="1600px" height="1000px">
+    </div>
+    <div id="login">
+    <span style="font-family: 궁서; ">
+        <a href="{% url 'login' %}">로 그 인</a><br>
+        <a href="{% url 'join' %}">회 원 가 입</a><br>
+    </span>
     </div>
     <div id="category">
+        <br>
         <ul class="a">
         <li><a href="{% url 'outer' %}">OUTER</a><br><br></li>
         <li><a href="{% url 'shirts' %}">SHIRTS</a><br><br></li>
         <li><a href="{% url 'pants' %}">PANTS</a><br><br></li>
         <li><a href="{% url 'shoes' %}">SHOES</a><br><br></li>
         <li><a href="{% url 'accessory' %}">ACCESSORY</a><br><br></li>
-        <li><a href="{% url 'search' %}">검색</a><br><br></li>
-        <li><a href="{% url 'cart' %}">장바구니</a><br><br></li>
-        <li><a href="{% url 'question' %}">Q&A</a><br><br></li>
-        <li><a href="{% url 'login' %}">로그인</a><br><br></li>
-        <li><a href="{% url 'join' %}">회원가입</a><br><br></li>
-        <li><a href="{% url 'game' %}">GAME</a></li>
+        <li><a href="{% url 'search' %}">SEARCH</a><br><br></li>
+        <li><a href="{% url 'cart' %}">CART</a><br><br></li>
         </ul>
+    </div>
+        <div id="pop">
+        <div style="height:375px;">
+        <img src="/static/img/123.jpg" width="300px" height="375px">
+        </div>
+        <div class="close">
+            <form name="pop_form">
+            <div id="check"><input type="checkbox" name="chkbox" value="checkbox">오늘 하루동안 보지 않기</div>
+            <div id="close" style="margin:auto;"><a href="javascript:closePop();">CLOSE</a></div>
+            </form>
+        </div>
     </div>
     <ul>
         <div id="photo" style="padding:20px ">
             <table><tr>
             {% for is_tr, product in mainList %}
                 <td style="padding:20px ">
-                <a href="http://naver.com/">
+                <a href="{% url 'item' itemnumber=20 %}">
                     <img src="/img/{{ product.photo }}" width="300px" height="450px" >
                     <p style="text-align: center">{{ product.name }}<br>
                     {{ product.price }}원</p>
@@ -45,8 +101,14 @@
             </tr></table>
         </div>
     </ul>
-    <div id="information">
-        <p>주소 : 경상대학교 30동<br><br>입금계좌<br>농협 895-01-205621<br>임혜경<br><br>전화번호<br>010-6255-3781</p>
+
+    <a id="toTop" href="#"><img src="/static/img/top.png" width="70" height="70" alt=""></a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="./images/jquery.scroll.pack.js"></script>
+    <script src="./images/jquery.easing.js"></script>
+
+    <div id="footer">
+        <p>주소 : 경상대학교 30동&emsp;&emsp;입금계좌 : 농협 000-0000-0000-00&emsp;&emsp;전화번호 : 010-1234-5678&emsp;&emsp;<a href="{% url 'question' %}">Q&A</a>&emsp;&emsp;<a href="{% url 'game' %}">GAME</a></p>
     </div>
 </body>
 </html>
