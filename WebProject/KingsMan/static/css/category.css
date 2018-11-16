@@ -91,6 +91,12 @@
 		text-align: left;
 	}
 
+	#kakao{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+	}
+
     a:link {color: black;}
     a:visited {color: black;}
     a:hover {color: red;}
