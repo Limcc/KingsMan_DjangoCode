@@ -91,11 +91,14 @@
 		text-align: left;
 	}
 
-	#kakao{
-    position: fixed;
-    top: 20px;
-    right: 20px;
+	#kakao {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		z-index: 5;
 	}
+
+
 
     a:link {color: black;}
     a:visited {color: black;}

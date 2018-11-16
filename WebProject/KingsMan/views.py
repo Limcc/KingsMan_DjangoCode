@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import product
+from django.contrib.auth.models import User
+from django.contrib.auth import login as Login, logout, authenticate
 
 # Create your views here.
 
@@ -64,3 +66,16 @@ def item(request, itemnumber):
 
 def banner(request):
     return render(request, "banner.html")
+
+def loginF(request):
+    id = request.POST["id"]
+    password = request.POST["password"]
+    user = authenticate(request, username=id, password=password)
+    if(user==None):
+        return HttpResponse("정보가 없습니다.")
+    Login(request, user)
+    return redirect(index)
+
+def logoutF(request):
+    logout(request)
+    return redirect(index)

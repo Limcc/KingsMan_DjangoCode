@@ -35,4 +35,6 @@ urlpatterns = [
     path("game", game, name="game"),
     path("item/<int:itemnumber>", item, name="item"),
     path("banner", banner, name="banner"),
+    path("loginF", loginF, name="loginF"),
+    path("logoutF", logoutF, name="logoutF"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

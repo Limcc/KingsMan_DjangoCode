@@ -5,8 +5,93 @@
     <meta charset="UTF-8">
     <title>KingsMan/{{ category }}</title>
     <link rel="stylesheet" type="text/css" href="{% static "css/category.css" %}">
+    <style>
+        #quest{
+            margin: 100px;
+        }
+        .animate{
+            transition: all .3s;
+            width: 900px;
+        }
+        input[name=question]{
+            display: none;
+        }
+        input[name=question] + label{
+            position: relative;
+            display: block;
+            padding: 20px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            background: #dddddd;
+            color: black;
+            z-index: 2;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            border-radius: 3px;
+        }
+
+        .response{
+            position: relative;
+            background: #B22222;
+            color: #7A2723;
+            padding: 10px 20px;
+            -webkit-transform: translate3d(0,-40px, 0) rotate(-.5deg);
+            z-index: 1;
+            opacity: 0;
+            border-radius: 3px;
+        }
+
+        input[name=question]:checked + label{
+            background: #F6F6F6;
+            color: #FF6666;
+        }
+        input[name=question]:checked + label + .response{
+            opacity: 1;
+            visibility: visible;
+            padding: 10px 20px;
+            -webkit-transform: translate3d(0, 0, 0) rotate(0deg);
+            -webkit-filter: blur(0px);
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .fixed-height{
+            height: 50px;
+            overflow: hidden;
+            opacity: 1 !important;
+        }
+        #toTop
+           {position:fixed; bottom:1px;
+           right:1px; cursor:pointer;
+           -moz-border-radius:5px;
+           -webkit-border-radius:5px; padding:5px
+        }
+    </style>
+    <script>
+    $(function(){
+        function setHeight(){
+            $(".response").each(function(index,element){
+                var target = $(element);
+                target.removeClass("fixed-height");
+                var height = target.innerHeight();
+                target.attr("data-height", height)
+                      .addClass("fixed-height");
+            });
+        };
+        $("input[name=question]").on("change", function(){
+            $("p.response").removeAttr("style");
+
+            var target = $(this).next().next();
+            target.height(target.attr("data-height"));
+        })
+        setHeight();
+    });
+    </script>
 </head>
+
 <body>
+    <div id="kakao">
+        <a href="https://open.kakao.com/o/sjJyKu4" target="_blank"><img src="/static/img/kakao.png"></a>
+    </div>
      <div id="logo">
 		<a href="/"><img src="/static/img/home.jpg" width="100%" height="100%"></a>
 	</div>
@@ -29,11 +114,52 @@
         </ul>
     </div>
 
-    <ul>
-        <div id="photo2" style="padding:20px ">
-            Q&A
+    <div id="quest">
+    <content style="position: absolute; left: 350px; top: 50px;  background-color: #eeeeee;">
+        <input class="animate" type="radio" name="question" id="q1"/>
+        <label class="animate" for="q1">Q: 주문한 상품을 취소하고 싶은데 어떻게 해야 하나요?</label>
+        <pre class="response animate">A:1> 배송전 환불 과정 - 신청하신 상품이 출고 전 상태일 경우에는 바로 환불이 가능합니다.
+
+  2> 배송된 이후의 환불 과정 - 상품을 수령한 날로부터 7일 이내!사용한 흔적이 전혀 없는 경우 반송 확인 후에 환불이 가능합니다.
+
+  < 상품 환불 시 유의사항>
+
+  - 상품 반송 시 착불로 반송하셨을 경우 환불금액에서 착불 반송료가 차감되고 환불됩니다.
+
+  - 사용한 흔적이 있는 상품을 반송하였을 경우에는 회원님께 착불로 재 발송 처리됩니다. (택 제거 흔적 포함)</pre>
+
+        <input class="animate" type="radio" name="question" id="q2"/>
+        <label class="animate" for="q2">Q: 배송기간이 얼마나 소요되나요?</label>
+        <pre  class="response animate">A: 배송기간은 입금 확인 후 상품 준비 및 검토/포장 후 배송처리까지는 2~7일 정도 소요됩니다. (공휴일 및 주말 제외)
+
+  주문 된 상품은 CJ대한통운 택배사를 통해 발송되며 수령기간은 1~3일정도 소요됩니다. (단, 도서산간지역은 2~4일소요)
+
+  주문폭주 및 업체 측의 생산지연으로 인해 배송이 늦어질 경우 따로 개별 연락을 드리며 갑작스러운 상품 품절시에도 개별 안내 드리고 있습니다.
+
+  임시품절 상품일 경우 배송준비기간이 일주일 이상 소요 될 수 있는 점 양해 부탁드립니다.
+
+  주문제작상품, 수입제품, 수제화 등의 경우에는 다소 배송이 지연 될 수 있으며, 이 경우 개별 연락을 드리고 있습니다.</pre>
+
+        <input class="animate" type="radio" name="question" id="q3"/>
+        <label class="animate" for="q3">Q: 정확한 상품의 색상을 알 수 있나요?</label>
+        <pre class="response animate">A: 모델 착용 컷의 경우 빛과 카메라의 설정에 인하여 실제의 색상과 차이가 발생할 수 있습니다.
+
+  착용 컷의 경우 상품의 코디 이미지와 핏 등을 참고하기 위하여 촬영되는 이미지이기때문에 자세한 색상과
+
+  디테일의 경우 모델컷 다음으로 나오는 상품 상세 이미지컷으로 확인해주셔야만 정확한 색상 확인이 가능합니다.
+
+  상세컷의 경우에도 사용하시는 모니터 화소나 색상 조절 등에 의하여
+
+  약간씩의 차이가 발생 할 수 있으며, 이로 인한 교환 혹은 반품은 불가능한점 양해 부탁드립니다.</pre>
+
+        <input class="animate" type="radio" name="question" id="q4"/>
+        <label class="animate" for="q4">Q: 고객 상담센터?</label>
+        <pre class="response animate">A: 킹스맨은 1대1 카카오톡 상담 서비스를 제공하고 있습니다.
+
+  페이지 우측 상단 카카오톡 로고를 클릭하시면 상담이 진행됩니다. </pre>
+        </content>
         </div>
-    </ul>
+
     <a id="toTop" href="#"><img src="/static/img/top.png" width="70" height="70" alt=""></a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <script src="./images/jquery.scroll.pack.js"></script>
