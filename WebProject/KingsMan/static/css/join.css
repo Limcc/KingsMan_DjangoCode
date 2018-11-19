@@ -6,7 +6,7 @@
 
 body {
     font-family: "Roboto";
-    font-size: 14px;
+    font-size: 40px;
     background-size: 200% 100% !important;
     animation: move 10s ease infinite;
     transform: translate3d(0, 0, 0);
@@ -16,7 +16,7 @@ body {
 
 .user {
     width: 90%;
-    max-width: 340px;
+    max-width: 500px;
     margin: 10vh auto;
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 .user__title {
-    font-size: 14px;
+    font-size: 30px;
     margin-bottom: -10px;
     font-weight: 500;
     color: white;

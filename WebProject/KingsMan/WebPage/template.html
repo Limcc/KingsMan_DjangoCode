@@ -14,15 +14,12 @@
 		<a href="/"><img src="/static/img/home.jpg" width="100%" height="100%"></a>
 	</div>
     <div id="login">
-    <span style="font-family: 궁서; ">
         {% if user.is_authenticated %}
             <p>{{ user.username }} 님<br>
-                <a href="{% url 'logoutF' %}">로 그 아 웃</a></p>
+                <a href="{% url 'logoutF' %}">LOGOUT</a></p>
         {% else %}
-            <a href="{% url 'login' %}">로 그 인</a><br>
-            <a href="{% url 'join' %}">회 원 가 입</a><br>
+            <p><a href="{% url 'login' %}">LOGIN</a></p>
         {% endif %}
-    </span>
     </div>
     <div id="category">
         <br>

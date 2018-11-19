@@ -5,6 +5,49 @@
     <meta charset="UTF-8">
     <title>KingsMan/{{ category }}</title>
     <link rel="stylesheet" type="text/css" href="{% static "css/category.css" %}">
+    <style>
+        form {
+            z-index: 1;
+            background: #FFFFFF;
+            max-width: 550px;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+        input.info{
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        p.message{
+            margin: 15px 0 0;
+            color: grey;
+            font-size: 12px;
+        }
+        p.king{
+            font-family: "Times NewRoman", Times, serif;
+            text-align: center;
+            font-size: 30px;
+        }
+        input.submit {
+            outline: 0;
+            background: black;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 22px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div id="kakao">
@@ -14,10 +57,12 @@
 		<a href="/"><img src="/static/img/home.jpg" width="100%" height="100%"></a>
 	</div>
     <div id="login">
-    <span style="font-family: 궁서; ">
-        <a href="{% url 'login' %}">로 그 인</a><br>
-        <a href="{% url 'join' %}">회 원 가 입</a><br>
-    </span>
+        {% if user.is_authenticated %}
+            <p>{{ user.username }} 님<br>
+                <a href="{% url 'logoutF' %}">LOGOUT</a></p>
+        {% else %}
+            <p><a href="{% url 'login' %}">LOGIN</a></p>
+        {% endif %}
     </div>
     <div id="category">
         <br>
@@ -31,14 +76,15 @@
         <li><a href="{% url 'cart' %}">CART</a><br><br></li>
         </ul>
     </div>
-
     <ul>
         <div id="photo2" style="padding:20px ">
-            <form action="{% url 'loginF' %}" method="post">
+            <h2 style="margin: 40px; text-align: center;">회원 로그인</h2>
+            <form class="login-form" action="{% url 'loginF' %}" method="post"> <p class="king">Kingsman</p><br>
                 {% csrf_token %}
-                <input type="text" name="id" value="" /> <br>
-                <input type="password" name="password" value=""/><br>
-                <input type="submit">
+                <input class="info" type="text" name="id" value="" placeholder="아이디"/><br>
+                <input class="info" type="password" name="password" value="" placeholder="비밀번호"/><br><br>
+                <input class="submit" type="submit" value="로그인">
+                <p class="message">아직 킹스맨 회원이 아니신가요?<br><a href="{% url 'join' %}">회원가입</a></p>
             </form>
         </div>
     </ul>

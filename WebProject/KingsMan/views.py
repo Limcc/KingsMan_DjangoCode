@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import product
 from django.contrib.auth.models import User
 from django.contrib.auth import login as Login, logout, authenticate
+from django.views import View
 
 # Create your views here.
 
@@ -79,3 +80,19 @@ def loginF(request):
 def logoutF(request):
     logout(request)
     return redirect(index)
+
+class Join(View) :
+    def get(self, request):
+        return render(request, "join.html")
+    def post(self, request):
+        id = request.POST["id"]
+        password = request.POST["password"]
+        email = request.POST["email"]
+        pw_confirm = request.POST["pw_confirm"]
+        if (len(password) < 8):
+            return HttpResponse("비밀번호를 8자 이상으로 설정해주세요.")
+        if(password != pw_confirm):
+            return HttpResponse("비밀번호가 일치하지 않습니다.")
+        user = User.objects.create_user(id, email, password)
+        user.save()
+        return redirect(index)

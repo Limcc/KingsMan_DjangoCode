@@ -13,21 +13,26 @@
         <h1 class="user__title">Kingsman</h1>
     </header>
 
-    <form class="form">
+    <form class="form" action="{% url 'join' %}" method="post">
+        {% csrf_token %}
         <div class="form__group">
-            <input type="text" placeholder="아이디" class="form__input" />
+            <input type="text" placeholder="아이디" class="form__input" name="id"/>
         </div>
 
         <div class="form__group">
-            <input type="email" placeholder="이메일" class="form__input" />
+            <input type="email" placeholder="이메일" class="form__input" name="email"/>
         </div>
 
         <div class="form__group">
-            <input type="password" placeholder="비밀번호" class="form__input" />
+            <input type="password" placeholder="비밀번호" class="form__input" name="password"/>
         </div>
 
         <div class="form__group">
-            <input type="submit" value="등록" onclick="alert('회원가입이 완료되었습니다')" class="form__input" />
+            <input type="password" placeholder="비밀번호확인" class="form__input" name="pw_confirm"/>
+        </div>
+
+        <div class="form__group">
+            <input type="submit" value="등록" class="form__input" />
         </div>
     </form>
 </div>

@@ -70,10 +70,12 @@
     </div>
 
     <div id="login">
-        <span style="font-family: 궁서; ">
-        <a href="login.html">로 그 인</a><br>
-        <a href="join.html">회 원 가 입</a><br>
-        </span>
+        {% if user.is_authenticated %}
+            <p>{{ user.username }} 님<br>
+                <a href="{% url 'logoutF' %}">로 그 아 웃</a></p>
+        {% else %}
+            <p><a href="{% url 'login' %}">로 그 인</a></p>
+        {% endif %}
     </div>
     <div id="category">
         <br>
@@ -82,7 +84,7 @@
         <li><a href="{% url 'shirts' %}">SHIRTS</a><br><br></li>
         <li><a href="{% url 'pants' %}">PANTS</a><br><br></li>
         <li><a href="{% url 'shoes' %}">SHOES</a><br><br></li>
-        <li><a href="{% url 'accessory' %}">ACCESSORY</a><br><br><br><br></li>
+        <li><a href="{% url 'accessory' %}">ACCESSORY</a><br><br></li>
         <li><a href="{% url 'search' %}">SEARCH</a><br><br></li>
         <li><a href="{% url 'cart' %}">CART</a><br><br></li>
         </ul>
