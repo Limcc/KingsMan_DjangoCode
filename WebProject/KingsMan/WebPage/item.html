@@ -126,26 +126,21 @@
                 <p><img src="{{ photo.photo.url }}" width="400px" height="600px"></p></td></tr>
         {% endfor %}
         <tr>
-            <td><em>COMMENT</em><br>
-            텍스쳐가 독특하고 매력적인 수트입니다.<br>
-            자켓은 땀흡수패드와 소매는 리얼버튼으로 제작되었습니다.<br>
-            또한 속주머니가 세개나 있어 수납공간이 여유있습니다.<br>
-            바지는 이중버튼으로 되어있고 안쪽에는 전부 헤리작업으로 마무리했습니다.<br>
-            그리고 주머니 안쪽에는 동전 주머니를 추가하였고, 밑단에는 5cm 여유분이 있어 기장을 늘릴 수 있습니다.<br>
-            와인 색상으로 포멀한 룩과 캐쥬얼한 룩 모두 소화가 가능한 만능 수트입니다.</td>
+            <td><p style="font-size: 40px"><strong>SIZE</strong></p>
+                <p>&emsp;<img src="/static/img/size.jpg" width="800px" height="800px"></p></td></tr></td>
         </tr>
         </table>
         <table class="ex">
         <tr>
             <td>
-            배송기간안내
+            <strong>배송기간안내</strong>
                 <ul>
                     <li>주문 시 입금기한은 7일 이내이며, 입금확인은 자동 시스템 처리(진행) 됩니다.</li>
                     <li>입금자명과 주문자 명이 다를 경우와 주문 금액이 조금이라도 다를 경우엔 입금확인이 되지 않으니 꼭 연락해 주세요.</li>
                     <li>결제(오후 6시 이전기준) 후 평균 2~5일 이내(일, 공휴일 제외) 상품을 수령하실 수 있습니다.</li>
                     <li>주문하실 때 품절이 아니더라도 재고 수량에 따라 조기 품절이 될 수 있으며 입고지연 및 품절 상품은 개별적으로 연락을 드리고 있으니 이 점 양해해 주시기 바랍니다.</li>
                 </ul>
-                배송안내
+                <strong>배송안내</strong>
                 <ul>
                     <li>상품의 구매액이 50,000원 이상인 경우 배송료는 무료입니다.</li>
                     <li>상품의 구매액이 50,000원 미만인 경우 배송료 2,500원이 결제 금액에 추가됩니다.</li>
@@ -162,8 +157,55 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <script src="./images/jquery.scroll.pack.js"></script>
     <script src="./images/jquery.easing.js"></script>
-    <div id="footer3">
-        <p>주소 : 경상대학교 30동&emsp;&emsp;입금계좌 : 농협 000-0000-0000-00&emsp;&emsp;전화번호 : 010-1234-5678&emsp;&emsp;<a href="{% url 'question' %}">Q&A</a>&emsp;&emsp;<a href="{% url 'game' %}">GAME</a></p>
+
+    <div id="footer3" style="position: absolute; right: 170px; background-color: white;">
+        <ul style="list-style: none; text-align: right; ">
+            <li style="display: inline-block; vertical-align: top; line-height: 16px; margin: 0 0 0 50px;">
+                <div>
+                    <h3 style="font-size: 25px;">
+                    <a href="{% url 'question' %}" style="font-size: 23px;">Q&A</a>&emsp;
+                    <a href="{% url 'game' %}">ⓖⓐⓜⓔ</a></h3>
+                </div>
+                <div>
+                    <h5 style="font-size: 13px; color: #777; line-height: 15px; font-weight: normal;">
+                    킹스맨&emsp;ㅣ&emsp;Owner:GNU CS Team&emsp;ㅣ&emsp;E-mail : Kingsman@naver.com<br><br><b style="color: black;">경상대학교 컴퓨터과학과</b>&emsp;ㅣ&emsp;660 경남 진주시 가좌동 경상대학교 30동</h5>
+                </div>
+                <div>
+                    <h3 style="font-size: 14px;">
+                        반품시 주소
+                    </h3>
+                </div>
+                <div>
+                    <h5>CJ대한통운 반품시 : <b style="color: grey; font-size: 13px;">경상남도 진주시 진주대로 501 경상대학교 30동 2층 (킹스맨)</b><br><b style="color: #CC3D3D; font-size: 13px;">*타택배 반품시 주소동일 무조건 선불</b></h5>
+                </div>
+            </li>
+            <li style="display: inline-block; vertical-align: top; line-height: 16px; margin: 0 0 0 50px;">
+                <div>
+                    <h3 style="font-size: 14px;">
+                        고객센터
+                    </h3>
+                    <h4>
+                        TEL.055-772-1380
+                    </h4>
+                </div>
+                <div>
+                    <h5 style="font-size: 10px; color: #777; line-height: 15px; font-weight: normal;">
+                        WEEKDAYS, AM 10:00 ~ PM 5:00<br>LUNCH, PM 12:00 ~ PM 01:00<br>SAT, SUN, HOLIDAY OFF
+                    </h5>
+                </div>
+                <div>
+                    <h3 style="font-size: 14px;">
+                        입금계좌
+                    </h3>
+                </div>
+                <div>
+                    <span style="font-size: 12px; color: #333; font-weight: normal; line-height: 20px;">농협</span>
+                    <b>302-2820-4878-11</b><br>
+                    <span style="font-size: 12px; color: #333; font-weight: normal; line-height: 20px;">예금주</span>
+                    <b>CS킹스맨</b>
+                </div>
+            </li>
+        </ul>
     </div>
 </body>
 </html>

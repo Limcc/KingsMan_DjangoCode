@@ -91,8 +91,54 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <script src="./images/jquery.scroll.pack.js"></script>
     <script src="./images/jquery.easing.js"></script>
-    <div id="footer2">
-        <p>주소 : 경상대학교 30동&emsp;&emsp;입금계좌 : 농협 000-0000-0000-00&emsp;&emsp;전화번호 : 010-1234-5678&emsp;&emsp;<a href="{% url 'question' %}">Q&A</a>&emsp;&emsp;<a href="{% url 'game' %}">GAME</a></p>
+    <div id="footer2" style="position: absolute; right: 170px; background-color: white;">
+        <ul style="list-style: none; text-align: right; ">
+            <li style="display: inline-block; vertical-align: top; line-height: 16px; margin: 0 0 0 50px;">
+                <div>
+                    <h3 style="font-size: 25px;">
+                    <a href="{% url 'question' %}" style="font-size: 23px;">Q&A</a>&emsp;
+                    <a href="{% url 'game' %}">ⓖⓐⓜⓔ</a></h3>
+                </div>
+                <div>
+                    <h5 style="font-size: 13px; color: #777; line-height: 15px; font-weight: normal;">
+                    킹스맨&emsp;ㅣ&emsp;Owner:GNU CS Team&emsp;ㅣ&emsp;E-mail : Kingsman@naver.com<br><br><b style="color: black;">경상대학교 컴퓨터과학과</b>&emsp;ㅣ&emsp;660 경남 진주시 가좌동 경상대학교 30동</h5>
+                </div>
+                <div>
+                    <h3 style="font-size: 14px;">
+                        반품시 주소
+                    </h3>
+                </div>
+                <div>
+                    <h5>CJ대한통운 반품시 : <b style="color: grey; font-size: 13px;">경상남도 진주시 진주대로 501 경상대학교 30동 2층 (킹스맨)</b><br><b style="color: #CC3D3D; font-size: 13px;">*타택배 반품시 주소동일 무조건 선불</b></h5>
+                </div>
+            </li>
+            <li style="display: inline-block; vertical-align: top; line-height: 16px; margin: 0 0 0 50px;">
+                <div>
+                    <h3 style="font-size: 14px;">
+                        고객센터
+                    </h3>
+                    <h4>
+                        TEL.055-772-1380
+                    </h4>
+                </div>
+                <div>
+                    <h5 style="font-size: 10px; color: #777; line-height: 15px; font-weight: normal;">
+                        WEEKDAYS, AM 10:00 ~ PM 5:00<br>LUNCH, PM 12:00 ~ PM 01:00<br>SAT, SUN, HOLIDAY OFF
+                    </h5>
+                </div>
+                <div>
+                    <h3 style="font-size: 14px;">
+                        입금계좌
+                    </h3>
+                </div>
+                <div>
+                    <span style="font-size: 12px; color: #333; font-weight: normal; line-height: 20px;">농협</span>
+                    <b>302-2820-4878-11</b><br>
+                    <span style="font-size: 12px; color: #333; font-weight: normal; line-height: 20px;">예금주</span>
+                    <b>CS킹스맨</b>
+                </div>
+            </li>
+        </ul>
     </div>
 </body>
 </html>

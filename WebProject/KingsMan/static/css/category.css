@@ -32,11 +32,12 @@
         width: 200px;
         height: 500px;
 	    position: fixed;
+		z-index: 1;
     }
     #photo {/*사진 메인화면*/
         background-color: white;
 	    width: 1400px;
-        height: 1700px;
+        height: 1900px;
 	    top: 1000px;
 	    left: 200px;
 	    position: absolute;
@@ -51,7 +52,7 @@
     #explain{
 		background-color: white;
 		width: 1400px;
-        height: 5000px;
+        height: 5700px;
 		left: 200px;
 		position: absolute;
 	}
@@ -72,7 +73,7 @@
 	#footer3{
 		width: 1700px;
 		height: 100px;
-		top: 5000px;
+		top: 5700px;
 		position: absolute;
 		text-align: center;
 	}
