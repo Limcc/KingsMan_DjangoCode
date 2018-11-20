@@ -1,4 +1,5 @@
 	body{
+		font-family: "Roboto";
 		margin: 0px;
 	}
 	#logo{
@@ -50,7 +51,7 @@
     #explain{
 		background-color: white;
 		width: 1400px;
-        height: 3500px;
+        height: 5000px;
 		left: 200px;
 		position: absolute;
 	}
@@ -71,7 +72,7 @@
 	#footer3{
 		width: 1700px;
 		height: 100px;
-		top: 3400px;
+		top: 5000px;
 		position: absolute;
 		text-align: center;
 	}

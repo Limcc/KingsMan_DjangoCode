@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import product
+from .models import product, productPhoto
 from django.contrib.auth.models import User
 from django.contrib.auth import login as Login, logout, authenticate
 from django.views import View
@@ -44,9 +44,6 @@ def accessory(request):
     dic = {"mainList": zip(is_tr, db)}
     return render(request, "template.html", dic)
 
-def search(request):
-    return render(request, "search.html")
-
 def cart(request):
     return render(request, "cart.html")
 
@@ -63,7 +60,9 @@ def game(request):
     return render(request, "game.html")
 
 def item(request, itemnumber):
-    return render(request, "item.html")
+    db = product.objects.get(code=itemnumber)
+    photoList = productPhoto.objects.filter(code=db)
+    return render(request, "item.html", {"product":db, "photoList":photoList, "mainPhoto":photoList[0]})
 
 def banner(request):
     return render(request, "banner.html")

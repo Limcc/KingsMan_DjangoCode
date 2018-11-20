@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>KingsMan/{{ category }}</title>
+    <title>KingsMan</title>
     <link rel="stylesheet" type="text/css" href="{% static "css/category.css" %}">
 </head>
 <body>
@@ -29,7 +29,6 @@
         <li><a href="{% url 'pants' %}">PANTS</a><br><br></li>
         <li><a href="{% url 'shoes' %}">SHOES</a><br><br></li>
         <li><a href="{% url 'accessory' %}">ACCESSORY</a><br><br></li>
-        <li><a href="{% url 'search' %}">SEARCH</a><br><br></li>
         <li><a href="{% url 'cart' %}">CART</a><br><br></li>
         </ul>
     </div>
@@ -39,7 +38,7 @@
               <table><tr>
               {% for is_tr, product in mainList %}
                   <td style="padding:20px ">
-                  <a href="http://naver.com/">
+                  <a href="{% url "item" itemnumber=product.code %}">
                       <img src="/img/{{ product.photo }}" width="250px" height="350px" >
                       <p style="text-align: center">{{ product.name }}<br>
                       {{ product.price }}원</p>

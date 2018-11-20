@@ -6,44 +6,69 @@
     <title>KingsMan</title>
     <link rel="stylesheet" type="text/css" href="{% static "css/category.css" %}">
 
-    <style type="text/css">
-        #pop{
-        width:300px; height:400px; background:#3d3d3d; color:white;
-        position:absolute; top:10px; left:450px; text-align:center;
-        border:2px solid lightgrey;
+    <!-- jQuery 라이브러리 참조 -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><!--제이쿼리 최신버전 사용-->
+
+    <!-- plugin 참조 -->
+    <script type="text/javascript" src="plugins/cookie/jquery.cookie.js"></script>
+    <style>
+        .pop_lay a{
+            color:blue;
+            text-decoration: none;
+            font-weight: 700;
         }
 
-        .close div{float:left; text-align:right;}
-        #check{font-size:12px; font-family:'돋움'; padding-left:70px;}
-        #close{font-size:13px; padding:5px; font-weight:bold;}
+        .pop_lay a:hover{
+            color:red;
+        }
 
+        .pop_lay{
+            width:406px;
+            height:467px;
+            position:fixed;
+            top:200px; left:200px;
+            padding:0px;
+            border:2px solid black;
+            background-color: #ffffdd;
+        }
+
+        .pop_lay h1{
+            text-align: center;
+        }
+
+        .pop_lay p{
+            font-size:12px;
+        }
+
+        .pop_lay .footer{
+            position:absolute;
+            right: 0; bottom: 0;
+            width:100%;
+            text-align: right;
+            background-color: #d4d4d4;
+        }
     </style>
 
-    <script language="JavaScript">
-    <!--
-        function setCookie( name, value, expiredays ) {
-            var todayDate = new Date();
-            todayDate.setDate( todayDate.getDate() + expiredays );
-            document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-        }
-
-        function closePop() {
-            if ( document.pop_form.chkbox.checked ){
-                setCookie( "maindiv", "done" , 1 );
+    <script>
+        $(document).ready(function(){
+            // 저장된 쿠키값이 Y가 아니라면 팝업창을 생성
+            if ($.cookie("nopopup") != "Y") {
+                $(".pop_lay").css('display','block');
+            }else{
+                $(".pop_lay").css('display','none');
             }
-            document.all['pop'].style.visibility = "hidden";
-        }
-    //-->
 
-        cookiedata = document.cookie;
-        if ( cookiedata.indexOf("maindiv=done") < 0 ){
-        document.all['pop'].style.visibility = "visible";
-        }
-        else {
-            document.all['pop'].style.visibility = "hidden";
-        }
+            // 저장된 쿠키 "nopopup" 값을 "Y"로 변경하고 페이지를 리로드
+            $("#clear_option").click(function(){
 
-        //-->하루동안 배너 x
+                // 링크의 페이지 이동 속성 강제 차단
+                event.preventDefault();
+                // 쿠키값을 "N"으로 변경
+                $.cookie("nopopup", "N");
+                // 페이지 리로드
+                window.location.reload();
+            });
+        });
     </script>
 
 </head>
@@ -74,27 +99,41 @@
         <li><a href="{% url 'pants' %}">PANTS</a><br><br></li>
         <li><a href="{% url 'shoes' %}">SHOES</a><br><br></li>
         <li><a href="{% url 'accessory' %}">ACCESSORY</a><br><br></li>
-        <li><a href="{% url 'search' %}">SEARCH</a><br><br></li>
         <li><a href="{% url 'cart' %}">CART</a><br><br></li>
         </ul>
     </div>
-        <div id="pop">
-        <div style="height:375px;">
-        <img src="/static/img/123.jpg" width="300px" height="375px">
-        </div>
-        <div class="close">
-            <form name="pop_form">
-            <div id="check"><input type="checkbox" name="chkbox" value="checkbox">오늘 하루동안 보지 않기</div>
-            <div id="close" style="margin:auto;"><a href="javascript:closePop();">CLOSE</a></div>
-            </form>
+    <script>
+         $(document).ready(function(){
+             // 닫기 버튼 클릭시
+             $("#close").click(function(){
+                 // 링크의 페이지 이동 속성 강제 차단
+                 event.preventDefault();
+                 if ($('#nopopup').is(":checked")){
+                     // 쿠키값을 "Y"로 하여 하루동안 저장시킴
+                     $.cookie("nopopup", "Y", {
+                         expires : 1
+                     });
+                 }
+                 // 팝업창 닫기
+                 $(".pop_lay").css('display','none');
+             });
+         });
+    </script>
+    <div class="pop_lay">
+        <img src="/static/img/123.jpg">
+        <div class="footer">
+            <label for="nopopup"> 오늘 하루 이 창 열지 않음 </label>
+            <input type="checkbox" id="nopopup">
+            <a href="#" id="close">닫기</a>
         </div>
     </div>
+
     <ul>
         <div id="photo" style="padding:20px ">
             <table><tr>
             {% for is_tr, product in mainList %}
                 <td style="padding:20px ">
-                <a href="{% url 'item' itemnumber=20 %}">
+                <a href="{% url "item" itemnumber=product.code %}">
                     <img src="/img/{{ product.photo }}" width="300px" height="450px" >
                     <p style="text-align: center">{{ product.name }}<br>
                     {{ product.price }}원</p>

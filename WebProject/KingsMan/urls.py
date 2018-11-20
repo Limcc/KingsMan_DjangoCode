@@ -27,7 +27,6 @@ urlpatterns = [
     path("pants", pants, name="pants"),
     path("shoes", shoes, name="shoes"),
     path("accessory", accessory, name="accessory"),
-    path("search", search, name="search"),
     path("cart", cart, name="cart"),
     path("question", question, name="question"),
     path("login", login, name="login"),
