@@ -64,9 +64,6 @@ def item(request, itemnumber):
     photoList = productPhoto.objects.filter(code=db)
     return render(request, "item.html", {"product":db, "photoList":photoList, "mainPhoto":photoList[0]})
 
-def banner(request):
-    return render(request, "banner.html")
-
 def loginF(request):
     id = request.POST["id"]
     password = request.POST["password"]

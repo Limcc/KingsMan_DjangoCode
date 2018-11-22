@@ -69,46 +69,47 @@
     <session id="-1643666930">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.6" value="3" />
+          <entry key="project.open.time.6" value="4" />
           <entry key="project.open.time.7" value="6" />
           <entry key="project.open.time.8" value="13" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="CSS" value="1" />
           <entry key="css" value="18" />
-          <entry key="html" value="106" />
+          <entry key="html" value="110" />
           <entry key="png" value="2" />
-          <entry key="py" value="49" />
+          <entry key="py" value="50" />
           <entry key="rnc" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="17" />
-          <entry key="HTML" value="106" />
+          <entry key="HTML" value="110" />
           <entry key="Image" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="49" />
+          <entry key="Python" value="50" />
           <entry key="RNG Compact" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="536" />
-          <entry key="html" value="2387" />
+          <entry key="html" value="2399" />
           <entry key="py" value="2171" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="463" />
-          <entry key="HTML" value="2387" />
+          <entry key="HTML" value="2399" />
           <entry key="PLAIN_TEXT" value="73" />
           <entry key="Python" value="2171" />
         </counts>
@@ -135,29 +136,75 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/question.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="165" column="58" selection-start-line="165" selection-start-column="58" selection-end-line="165" selection-end-column="58" />
+            <state relative-caret-position="2584">
+              <caret line="136" selection-start-line="136" selection-end-line="136" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KingsMan/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1007">
-              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+            <state relative-caret-position="209">
+              <caret line="188" column="74" selection-start-line="188" selection-start-column="74" selection-end-line="188" selection-end-column="74" />
+              <folding>
+                <element signature="e#6932#6938#0#HTML" expanded="true" />
+                <element signature="e#7013#7019#0#HTML" expanded="true" />
+                <element signature="e#7019#7025#0#HTML" expanded="true" />
+                <element signature="e#7025#7031#0#HTML" expanded="true" />
+                <element signature="e#7031#7037#0#HTML" expanded="true" />
+                <element signature="e#7037#7043#0#HTML" expanded="true" />
+                <element signature="e#7043#7049#0#HTML" expanded="true" />
+                <element signature="e#7049#7055#0#HTML" expanded="true" />
+                <element signature="e#7055#7061#0#HTML" expanded="true" />
+                <element signature="e#7061#7067#0#HTML" expanded="true" />
+                <element signature="e#7067#7073#0#HTML" expanded="true" />
+                <element signature="e#7073#7079#0#HTML" expanded="true" />
+                <element signature="e#7088#7094#0#HTML" expanded="true" />
+                <element signature="e#7094#7100#0#HTML" expanded="true" />
+                <element signature="e#7100#7106#0#HTML" expanded="true" />
+                <element signature="e#7106#7112#0#HTML" expanded="true" />
+                <element signature="e#7112#7118#0#HTML" expanded="true" />
+                <element signature="e#7118#7124#0#HTML" expanded="true" />
+                <element signature="e#7124#7130#0#HTML" expanded="true" />
+                <element signature="e#7130#7136#0#HTML" expanded="true" />
+                <element signature="e#7136#7142#0#HTML" expanded="true" />
+                <element signature="e#7142#7148#0#HTML" expanded="true" />
+                <element signature="e#7148#7154#0#HTML" expanded="true" />
+                <element signature="e#7163#7169#0#HTML" expanded="true" />
+                <element signature="e#7169#7175#0#HTML" expanded="true" />
+                <element signature="e#7175#7181#0#HTML" expanded="true" />
+                <element signature="e#7181#7187#0#HTML" expanded="true" />
+                <element signature="e#7187#7193#0#HTML" expanded="true" />
+                <element signature="e#7193#7199#0#HTML" expanded="true" />
+                <element signature="e#7199#7205#0#HTML" expanded="true" />
+                <element signature="e#7205#7211#0#HTML" expanded="true" />
+                <element signature="e#7211#7217#0#HTML" expanded="true" />
+                <element signature="e#7217#7223#0#HTML" expanded="true" />
+                <element signature="e#7223#7229#0#HTML" expanded="true" />
+                <element signature="e#7238#7244#0#HTML" expanded="true" />
+                <element signature="e#7244#7250#0#HTML" expanded="true" />
+                <element signature="e#7250#7256#0#HTML" expanded="true" />
+                <element signature="e#7256#7262#0#HTML" expanded="true" />
+                <element signature="e#7262#7268#0#HTML" expanded="true" />
+                <element signature="e#7268#7274#0#HTML" expanded="true" />
+                <element signature="e#7274#7280#0#HTML" expanded="true" />
+                <element signature="e#7280#7286#0#HTML" expanded="true" />
+                <element signature="e#7286#7292#0#HTML" expanded="true" />
+                <element signature="e#7292#7298#0#HTML" expanded="true" />
+                <element signature="e#7298#7304#0#HTML" expanded="true" />
+                <element signature="e#7371#7377#0#HTML" expanded="true" />
+                <element signature="e#8189#8195#0#HTML" expanded="true" />
+                <element signature="e#8428#8434#0#HTML" expanded="true" />
+                <element signature="e#8435#8441#0#HTML" expanded="true" />
+                <element signature="e#8458#8464#0#HTML" expanded="true" />
+                <element signature="e#8465#8471#0#HTML" expanded="true" />
+                <element signature="e#8547#8553#0#HTML" expanded="true" />
+                <element signature="e#8554#8560#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,38 +212,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/item.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2698">
-              <caret line="142" column="37" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#td#0;n#tr#1;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#4662#4668#1#HTML" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#h3#0;n#div#0;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#6487#6493#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#1;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#6726#6732#0#HTML" expanded="true" />
-                <element signature="e#6733#6739#0#HTML" expanded="true" />
-                <element signature="e#6756#6762#0#HTML" expanded="true" />
-                <element signature="e#6763#6769#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#h5#0;n#div#1;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#6845#6851#0#HTML" expanded="true" />
-                <element signature="e#6852#6858#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#2;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#h5#0;n#div#3;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#1;n#h5#0;n#div#3;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#1;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#li#1;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#1;n#li#1;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#2;n#li#1;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#3;n#li#1;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#3;n#li#1;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="1900">
+              <caret line="100" column="62" selection-start-line="100" selection-start-column="62" selection-end-line="100" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -213,8 +230,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KingsMan/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+            <state relative-caret-position="608">
+              <caret line="37" column="65" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -231,8 +248,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/KingsMan.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2983">
-              <caret line="157" column="49" selection-start-line="157" selection-start-column="49" selection-end-line="157" selection-end-column="49" />
+            <state relative-caret-position="722">
+              <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KingsMan/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1121">
+              <caret line="64" column="104" selection-start-line="64" selection-start-column="104" selection-end-line="64" selection-end-column="104" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+                <marker date="1542886062691" expanded="true" signature="2455:2460" ph="..." />
+                <marker date="1542886062691" expanded="true" signature="2483:2532" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -285,15 +316,15 @@
         <option value="$PROJECT_DIR$/KingsMan/static/css/join.css" />
         <option value="$PROJECT_DIR$/KingsMan/WebPage/banner.html" />
         <option value="$PROJECT_DIR$/KingsMan/WebPage/detail.html" />
-        <option value="$PROJECT_DIR$/KingsMan/views.py" />
-        <option value="$PROJECT_DIR$/KingsMan/urls.py" />
-        <option value="$PROJECT_DIR$/KingsMan/WebPage/KingsMan.html" />
         <option value="$PROJECT_DIR$/KingsMan/WebPage/item.html" />
         <option value="$PROJECT_DIR$/KingsMan/static/css/category.css" />
         <option value="$PROJECT_DIR$/KingsMan/WebPage/login.html" />
         <option value="$PROJECT_DIR$/KingsMan/WebPage/template.html" />
-        <option value="$PROJECT_DIR$/KingsMan/WebPage/cart.html" />
         <option value="$PROJECT_DIR$/KingsMan/WebPage/question.html" />
+        <option value="$PROJECT_DIR$/KingsMan/WebPage/KingsMan.html" />
+        <option value="$PROJECT_DIR$/KingsMan/views.py" />
+        <option value="$PROJECT_DIR$/KingsMan/urls.py" />
+        <option value="$PROJECT_DIR$/KingsMan/WebPage/cart.html" />
       </list>
     </option>
   </component>
@@ -473,12 +504,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14818764" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15138593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2505423" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -603,13 +635,6 @@
     <entry file="file://$PROJECT_DIR$/KingsMan/static/img/joinlogo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/banner.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/detail.html" />
     <entry file="file://$PROJECT_DIR$/KingsMan/static/css/join.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -647,29 +672,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KingsMan/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-            <marker date="1542720434404" expanded="true" signature="2519:2524" ph="..." />
-            <marker date="1542720434404" expanded="true" signature="2547:2596" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/join.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
           <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -680,47 +686,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/cart.html">
+    <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/banner.html" />
+    <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+        <state relative-caret-position="1083">
+          <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/question.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2584">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/item.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2698">
-          <caret line="142" column="37" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#form#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#td#0;n#tr#1;n#table#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4662#4668#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#h3#0;n#div#0;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#6487#6493#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#1;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#6726#6732#0#HTML" expanded="true" />
-            <element signature="e#6733#6739#0#HTML" expanded="true" />
-            <element signature="e#6756#6762#0#HTML" expanded="true" />
-            <element signature="e#6763#6769#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h5#0;n#div#1;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#6845#6851#0#HTML" expanded="true" />
-            <element signature="e#6852#6858#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#2;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#h5#0;n#div#3;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#1;n#h5#0;n#div#3;n#li#0;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#li#1;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#1;n#li#1;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#2;n#li#1;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#3;n#li#1;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#3;n#li#1;n#ul#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1900">
+          <caret line="100" column="62" selection-start-line="100" selection-start-column="62" selection-end-line="100" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -733,8 +717,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/KingsMan/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+        <state relative-caret-position="608">
+          <caret line="37" column="65" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -747,15 +731,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/KingsMan.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2983">
-          <caret line="157" column="49" selection-start-line="157" selection-start-column="49" selection-end-line="157" selection-end-column="49" />
+        <state relative-caret-position="722">
+          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/question.html">
+    <entry file="file://$PROJECT_DIR$/KingsMan/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="165" column="58" selection-start-line="165" selection-start-column="58" selection-end-line="165" selection-end-column="58" />
+        <state relative-caret-position="1121">
+          <caret line="64" column="104" selection-start-line="64" selection-start-column="104" selection-end-line="64" selection-end-column="104" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+            <marker date="1542886062691" expanded="true" signature="2455:2460" ph="..." />
+            <marker date="1542886062691" expanded="true" signature="2483:2532" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KingsMan/WebPage/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="188" column="74" selection-start-line="188" selection-start-column="74" selection-end-line="188" selection-end-column="74" />
+          <folding>
+            <element signature="e#6932#6938#0#HTML" expanded="true" />
+            <element signature="e#7013#7019#0#HTML" expanded="true" />
+            <element signature="e#7019#7025#0#HTML" expanded="true" />
+            <element signature="e#7025#7031#0#HTML" expanded="true" />
+            <element signature="e#7031#7037#0#HTML" expanded="true" />
+            <element signature="e#7037#7043#0#HTML" expanded="true" />
+            <element signature="e#7043#7049#0#HTML" expanded="true" />
+            <element signature="e#7049#7055#0#HTML" expanded="true" />
+            <element signature="e#7055#7061#0#HTML" expanded="true" />
+            <element signature="e#7061#7067#0#HTML" expanded="true" />
+            <element signature="e#7067#7073#0#HTML" expanded="true" />
+            <element signature="e#7073#7079#0#HTML" expanded="true" />
+            <element signature="e#7088#7094#0#HTML" expanded="true" />
+            <element signature="e#7094#7100#0#HTML" expanded="true" />
+            <element signature="e#7100#7106#0#HTML" expanded="true" />
+            <element signature="e#7106#7112#0#HTML" expanded="true" />
+            <element signature="e#7112#7118#0#HTML" expanded="true" />
+            <element signature="e#7118#7124#0#HTML" expanded="true" />
+            <element signature="e#7124#7130#0#HTML" expanded="true" />
+            <element signature="e#7130#7136#0#HTML" expanded="true" />
+            <element signature="e#7136#7142#0#HTML" expanded="true" />
+            <element signature="e#7142#7148#0#HTML" expanded="true" />
+            <element signature="e#7148#7154#0#HTML" expanded="true" />
+            <element signature="e#7163#7169#0#HTML" expanded="true" />
+            <element signature="e#7169#7175#0#HTML" expanded="true" />
+            <element signature="e#7175#7181#0#HTML" expanded="true" />
+            <element signature="e#7181#7187#0#HTML" expanded="true" />
+            <element signature="e#7187#7193#0#HTML" expanded="true" />
+            <element signature="e#7193#7199#0#HTML" expanded="true" />
+            <element signature="e#7199#7205#0#HTML" expanded="true" />
+            <element signature="e#7205#7211#0#HTML" expanded="true" />
+            <element signature="e#7211#7217#0#HTML" expanded="true" />
+            <element signature="e#7217#7223#0#HTML" expanded="true" />
+            <element signature="e#7223#7229#0#HTML" expanded="true" />
+            <element signature="e#7238#7244#0#HTML" expanded="true" />
+            <element signature="e#7244#7250#0#HTML" expanded="true" />
+            <element signature="e#7250#7256#0#HTML" expanded="true" />
+            <element signature="e#7256#7262#0#HTML" expanded="true" />
+            <element signature="e#7262#7268#0#HTML" expanded="true" />
+            <element signature="e#7268#7274#0#HTML" expanded="true" />
+            <element signature="e#7274#7280#0#HTML" expanded="true" />
+            <element signature="e#7280#7286#0#HTML" expanded="true" />
+            <element signature="e#7286#7292#0#HTML" expanded="true" />
+            <element signature="e#7292#7298#0#HTML" expanded="true" />
+            <element signature="e#7298#7304#0#HTML" expanded="true" />
+            <element signature="e#7371#7377#0#HTML" expanded="true" />
+            <element signature="e#8189#8195#0#HTML" expanded="true" />
+            <element signature="e#8428#8434#0#HTML" expanded="true" />
+            <element signature="e#8435#8441#0#HTML" expanded="true" />
+            <element signature="e#8458#8464#0#HTML" expanded="true" />
+            <element signature="e#8465#8471#0#HTML" expanded="true" />
+            <element signature="e#8547#8553#0#HTML" expanded="true" />
+            <element signature="e#8554#8560#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

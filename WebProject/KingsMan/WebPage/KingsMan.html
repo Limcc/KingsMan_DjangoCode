@@ -6,71 +6,6 @@
     <title>KingsMan</title>
     <link rel="stylesheet" type="text/css" href="{% static "css/category.css" %}">
 
-    <!-- jQuery 라이브러리 참조 -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><!--제이쿼리 최신버전 사용-->
-
-    <!-- plugin 참조 -->
-    <script type="text/javascript" src="plugins/cookie/jquery.cookie.js"></script>
-    <style>
-        .pop_lay a{
-            color:blue;
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        .pop_lay a:hover{
-            color:red;
-        }
-
-        .pop_lay{
-            width:406px;
-            height:467px;
-            position:fixed;
-            top:200px; left:200px;
-            padding:0px;
-            border:2px solid black;
-            background-color: #ffffdd;
-        }
-
-        .pop_lay h1{
-            text-align: center;
-        }
-
-        .pop_lay p{
-            font-size:12px;
-        }
-
-        .pop_lay .footer{
-            position:absolute;
-            right: 0; bottom: 0;
-            width:100%;
-            text-align: right;
-            background-color: #d4d4d4;
-        }
-    </style>
-
-    <script>
-        $(document).ready(function(){
-            // 저장된 쿠키값이 Y가 아니라면 팝업창을 생성
-            if ($.cookie("nopopup") != "Y") {
-                $(".pop_lay").css('display','block');
-            }else{
-                $(".pop_lay").css('display','none');
-            }
-
-            // 저장된 쿠키 "nopopup" 값을 "Y"로 변경하고 페이지를 리로드
-            $("#clear_option").click(function(){
-
-                // 링크의 페이지 이동 속성 강제 차단
-                event.preventDefault();
-                // 쿠키값을 "N"으로 변경
-                $.cookie("nopopup", "N");
-                // 페이지 리로드
-                window.location.reload();
-            });
-        });
-    </script>
-
 </head>
 <body>
     <div id="kakao">
@@ -101,31 +36,6 @@
         <li><a href="{% url 'accessory' %}">ACCESSORY</a><br><br></li>
         <li><a href="{% url 'cart' %}">CART</a><br><br></li>
         </ul>
-    </div>
-    <script>
-         $(document).ready(function(){
-             // 닫기 버튼 클릭시
-             $("#close").click(function(){
-                 // 링크의 페이지 이동 속성 강제 차단
-                 event.preventDefault();
-                 if ($('#nopopup').is(":checked")){
-                     // 쿠키값을 "Y"로 하여 하루동안 저장시킴
-                     $.cookie("nopopup", "Y", {
-                         expires : 1
-                     });
-                 }
-                 // 팝업창 닫기
-                 $(".pop_lay").css('display','none');
-             });
-         });
-    </script>
-    <div class="pop_lay">
-        <img src="/static/img/123.jpg">
-        <div class="footer">
-            <label for="nopopup"> 오늘 하루 이 창 열지 않음 </label>
-            <input type="checkbox" id="nopopup">
-            <a href="#" id="close">닫기</a>
-        </div>
     </div>
 
     <ul>

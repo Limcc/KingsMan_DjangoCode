@@ -5,14 +5,100 @@
     <title>KingsMan</title>
     <link rel="stylesheet" type="text/css" href="../static/css/category.css">
     <style>
-        #cart {/*장바구니*/
-            display: table-cell;
-            background-color: darksalmon;
-            width: 80%;
-            height: 90%;
-            float: right;
+        #cart {
+            border-top: 1px solid #444444;
+            border-bottom: 1px solid #444444;
+            border-spacing: 50px 10px;
         }
     </style>
+	<script>
+		function buy(num){
+			calc(num);
+			alert(document.calculator.total.value+'원입니다.');
+		}
+		function calc(num){
+            if(num==-1){
+                calc(1);
+                calc(2);
+                calc(3);
+                i1=0;
+                i2=0;
+                i3=0;
+                x=document.calculator.number1.value
+                i1=x*15000;
+                y=document.calculator.number2.value
+                i2=y*20000;
+                z=document.calculator.number3.value
+                i3=z*23000;
+                document.calculator.price.value=Number(i1)+Number(i2)+Number(i3);
+                if(document.calculator.price.value>=50000 || document.calculator.price.value==0){
+                    document.calculator.carry.value=0;
+                    }
+                else{
+                    document.calculator.carry.value=2500;
+                    }
+                document.calculator.total.value=Number(document.calculator.price.value)+Number(document.calculator.carry.value);
+                }
+		if(num==0){
+			calc(1);
+			calc(2);
+			calc(3);
+			i1=0;
+			i2=0;
+			i3=0;
+			if(document.calculator.item1.checked== true){
+				x=document.calculator.number1.value
+				i1=x*15000;
+				}
+			if(document.calculator.item2.checked== true){
+				x=document.calculator.number2.value
+				i2=x*20000;
+				}
+			if(document.calculator.item3.checked== true){
+				x=document.calculator.number3.value
+				i3=x*23000;
+				}
+			document.calculator.price.value=Number(i1)+Number(i2)+Number(i3);
+			if(document.calculator.price.value>=50000 || document.calculator.price.value==0){
+				document.calculator.carry.value=0;
+				}
+			else{
+				document.calculator.carry.value=2500;
+				}
+			document.calculator.total.value=Number(document.calculator.price.value)+Number(document.calculator.carry.value);
+			}
+		if(num==1){
+			x=Number(document.calculator.number1.value);
+			y=15000*x;
+			if(y>=50000 || y==0){
+				document.calculator.sum1.value=y;
+				}
+			else{
+				document.calculator.sum1.value=Number(y)+2500;
+				}
+			}
+		if(num==2){
+			x=Number(document.calculator.number2.value);
+			y=20000*x;
+			if(y>=50000 || y==0){
+				document.calculator.sum2.value=y;
+				}
+			else{
+				document.calculator.sum2.value=Number(y)+2500;
+				}
+			}
+		if(num==3){
+			x=Number(document.calculator.number3.value);
+			y=23000*x;
+			if(y>=50000 || y==0){
+				document.calculator.sum3.value=y;
+				}
+			else{
+				document.calculator.sum3.value=Number(y)+2500;
+				}
+			}
+		}
+	</script>
 </head>
 <body>
     <div id="kakao">
@@ -42,10 +128,71 @@
     </div>
 
     <ul>
-        <div id="photo2" style="padding:20px ">
-            쇼핑카트
-        </div>
+    <div id="photo2" style="padding:20px ">
+        <h1>CART</h1>
+        <form name="calculator">
+        <table border-right="none">
+            <tr>
+                <td><strong>총 상품금액</strong></td>
+                <td rowspan="2"><strong>+</strong></td>
+                <td><strong>총 배송비</strong></td>
+                <td rowspan="2"><strong>+</strong></td>
+                <td><strong>결제예정금액</strong></td>
+            </tr>
+            <tr>
+                <td><input type="text" style="border: none; text-align: right; width:100px;" name="price">원</td>
+                <td><input type="text" style="border: none; text-align: right; width:100px;" name="carry">원</td>
+                <td><input type="text" style="border: none; text-align: right; width:100px;" name="total">원</td>
+            </tr>
+        </table>
+        <table id="cart">
+            <tr>
+                <td><input type="checkbox" name="item1" ></td>
+                <td><img src="베니스 (와인).jpg" width="100px" height="150px"></td>
+                <td><strong>베니스 (와인)</strong><br><br>사이즈 : L</td>
+                <td>판매가<br><br>15,000원</td>
+                <td><input type="number" style="border: none; text-align: right; width:30px;" name="number1" value="1"><input type="button" value="변경" onclick="calc(1);"></td>
+                <td>기본배송</td>
+                <td>배송비<br><br>2,500원</td>
+                <td>합계<br><br><input type="text" style="border: none; text-align: right; width:100px;" name="sum1">원</td>
+                <td><input type="button" value="X"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="item2" ></td>
+                <td><img src="르미체크.jpg" width="100px" height="150px"></td>
+                <td><strong>르미체크</strong><br><br>사이즈 : M</td>
+                <td>판매가<br><br>20,000원</td>
+                <td><input type="number" style="border: none; text-align: right; width:30px;" name="number2" value="1"><input type="button" value="변경" onclick="calc(2);"></td>
+                <td>기본배송</td>
+                <td>배송비<br><br>2,500원</td>
+                <td>합계<br><br><input type="text" style="border: none; text-align: right; width:100px;" name="sum2">원</td>
+                <td><input type="button" value="X"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="item3" ></td>
+                <td><img src="브리올 (라이트그레이).jpg" width="100px" height="150px"></td>
+                <td><strong>브리올 (라이트그레이)</strong><br><br>사이즈 : XL</td>
+                <td>판매가<br><br>23,000원</td>
+                <td><input type="number" style="border: none; text-align: right; width:30px;" name="number3" value="1"><input type="button" value="변경" onclick="calc(2);"></td>
+                <td>기본배송</td>
+                <td>배송비<br><br>2,500원</td>
+                <td>합계<br><br><input type="text" style="border: none; text-align: right; width:100px;" name="sum3">원</td>
+                <td><input type="button" value="X"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="button" value="체크된 상품 계산" onclick="calc(0);">&emsp;
+        <input type="button" value="체크된 상품 결제" onclick="buy(0);">
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <input type="button" value="전체 상품 계산" onclick="calc(-1);">&emsp;
+        <input type="button" value="전체 상품 결제" onclick="buy(-1);">
+        </form>
+	</div>
     </ul>
+
     <a id="toTop" href="#"><img src="/static/img/top.png" width="70" height="70" alt=""></a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <script src="./images/jquery.scroll.pack.js"></script>
