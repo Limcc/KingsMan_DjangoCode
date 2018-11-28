@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import product, productPhoto
+from .models import product, productPhoto, cart
 from django.contrib.auth.models import User
 from django.contrib.auth import login as Login, logout, authenticate
 from django.views import View
@@ -44,8 +44,40 @@ def accessory(request):
     dic = {"mainList": zip(is_tr, db)}
     return render(request, "template.html", dic)
 
-def cart(request):
-    return render(request, "cart.html")
+class cartProcess(View):
+    def get(self, request):
+        cartList = cart.objects.filter(userName=request.user)
+        return render(request, "cart.html", {"product":cartList})
+
+    def post(self, request):
+        code = request.POST["code"]
+        productNum = request.POST["amount"]
+        size = request.POST["size"]
+        db = product.objects.get(code=code)
+        cartProduct = cart(name=db, amount=productNum, size=size, userName=request.user)
+        cartProduct.save()
+        return redirect("cart")
+
+
+def delete(request, code):
+    cartList = cart.objects.filter(userName=request.user)
+    for i in cartList:
+        if (i.name.code == code):
+            i.delete()
+            return redirect("cart")
+    #return redirect("cart")
+    return HttpResponse("탐색실패")
+
+def allDelete(request):
+    cartList = cart.objects.filter(userName=request.user)
+    cartList.delete()
+    return redirect("cart")
+
+def change_number(request):
+    userName = request.GET["userName"]
+    item = request.GET["item"]
+    count = request.GET["count"]
+    return redirect(cart)
 
 def question(request):
     return render(request, "question.html")
@@ -59,10 +91,14 @@ def join(request):
 def game(request):
     return render(request, "game.html")
 
-def item(request, itemnumber):
-    db = product.objects.get(code=itemnumber)
-    photoList = productPhoto.objects.filter(code=db)
-    return render(request, "item.html", {"product":db, "photoList":photoList, "mainPhoto":photoList[0]})
+class item(View):
+    def get(self, request, itemnumber):
+        db = product.objects.get(code=itemnumber)
+        photoList = productPhoto.objects.filter(code=db)
+        return render(request, "item.html", {"product":db, "photoList":photoList, "mainPhoto":photoList[0]})
+    def post(self, request):
+        pass
+
 
 def loginF(request):
     id = request.POST["id"]
@@ -92,3 +128,4 @@ class Join(View) :
         user = User.objects.create_user(id, email, password)
         user.save()
         return redirect(index)
+

@@ -91,11 +91,14 @@
     <div id="explain">
         <table border-right="none">
         <tr>
+            <form name="form" method="post" action="{% url "cart" %}">
+            {% csrf_token %}
+            <input type="hidden" name="code" value="{{ product.code }}">
             <td rowspan="4"><img src="{{ mainPhoto.photo.url }}" width="300px" height="450px"></td>
             <td><div id="right" align="center">
                 <p style="font-size: 20px; font-family:'Roboto'">{{ product.name }}<br><br>{{ product.price }}<br></p>
-                <select>
-                    <option value="*" link_image="" >- [필수] 사이즈를 선택해 주세요 - </option>
+                <select name="size">
+                    <option value="*" link_image="" >- [필수] 사이즈를 선해 주세요 - </option>
                     <option value="**" link_image="">-------------------</option>
                     <option value="S" link_image="">S</option>
                     <option value="M" link_image="">M</option>
@@ -103,20 +106,21 @@
                     <option value="XL" link_image="">XL</option>
                 </select>
                 <br><br>
-                <form name="form" method="get" >
+                <!--<form name="form" method="post">-->
                     <p style="font-size: 16px; font-family:'Roboto'">
                     수량 : <input type=hidden name="sell_price" value="{{ product.price }}"><!--value 값이 옷 한벌가격 상품마다 가격 바꿀것 -->
                     <input type="text" name="amount" value="1" size="3" onchange="change();">
                     <input type="button" value=" + " onclick="add();"><input type="button" value=" - " onclick="del();"><br>
                     금액 : <input type="text" name="sum" size="11" readonly>원
                     </p>
-                </form>
+
                 <br><br>
                 <ul>
-                    <li style="border:1px solid black; background-color: black;"><a style="color: white" href="#">구매하기</a></li>
-                    <li style="border:1px solid grey; background-color: white"><a href="#">장바구니</a></li>
+                    <li style="border:1px solid black; background-color: black;"><a style="color: white" href="#" onclick='alert("주문이 완료되었습니다.")'>구매하기</a></li>
+                    <li style="border:1px solid lightgrey; background-color: lightgrey" ><input type="submit" value="장 바 구 니" style="border: lightgrey; background-color: lightgrey; font-size: 16px"></li>
                 </ul>
-            </div></td>
+                    </form>
+            </td>
         </tr>
         </table>
         <hr/><hr/>
